@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
+import Navbar from './Navbar';
 
 const Signup = () => {
   var navigate = useNavigate()
@@ -61,6 +62,8 @@ const Signup = () => {
  
 
   return (
+    <>
+    <Navbar/>
     <section className="vh-120" style={{ backgroundColor: '#eee' }}>
       <div className="container h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
@@ -226,7 +229,9 @@ const Signup = () => {
         </div>
       </div>
     </section>
+    </>
   );
+  
 };
 
 export default Signup;

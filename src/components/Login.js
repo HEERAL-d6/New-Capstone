@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Login.css';
+import Navbar from './Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 import Cookies from 'js-cookie';
 
+
+
 function Login() {
-    var navigate = useNavigate()
+    
+     var navigate = useNavigate()
+     
+    var [error,setError] = useState(false)
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -22,8 +28,10 @@ function Login() {
   };
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
     console.log('Form submitted with data:', formData);
+    
     axios({
                 method:"post",
                 url:"https://daluvnubla.execute-api.us-west-2.amazonaws.com/dev/api/auth/signin",
@@ -43,24 +51,25 @@ function Login() {
                     } else if (roles.includes('ROLE_ADMIN')) {
                     navigate('/admin');
                      }      else {
-                     console.log('response from api',response.data)
+                        setError("Invalid Login")
                     }
                     // Store accessToken in cookies
-                    const accessToken = response.data.accessToken;
-                    console.log(accessToken);
+                     const accessToken = response.data.accessToken;
                     Cookies.set('accessToken', accessToken, { expires: 7 }); // Set expiration as needed
+                    
            },function(error){
             console.log("error from signin api" , error)
            })
-    // Add your login logic here
-    // console.log('Login form submitted with data:', formData);
-    setFormData({
+ 
+       setFormData({
         username: '',
         password: '',
     })
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="container-fluid p-3 my-5" style={{ textAlign: 'center' }}>
       <div className="row">
         <div className="col-10 col-md-6">
@@ -108,10 +117,12 @@ function Login() {
                     required
                   />
                 </div>
-                
-                <button type="submit" className="btn btn-primary w-100">
+                <div className="d-grid">
+                 <button type="submit" className="btn btn-primary w-100">
                   Login
                 </button>
+               
+                </div>
               </form>
             </div>
           </div>
@@ -119,7 +130,9 @@ function Login() {
         </div>
       </div>
     </div>
+    </>
   );
+  
 }
 
 export default Login;
