@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 
 import ScrollToTopButton from './ScrollToTopButton'
 import { Typography } from '@mui/material';
-import './MainBody.css'
+
 import "./sidebar.css"
 
 function Sidebar() {

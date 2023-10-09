@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MainBody from './MainBody';
+
 import Sidebar from './Sidebar';
 function Carousel() {
   return (
@@ -20,9 +20,7 @@ function Carousel() {
         alt="img2"
       />
       </div>
-      {/* <div>
-        <MainBody/>
-      </div> */}
+      
       <div>
         <Sidebar/>
       </div>
