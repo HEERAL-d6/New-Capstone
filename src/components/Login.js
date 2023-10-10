@@ -49,7 +49,7 @@ function Login() {
                     } else if (roles.includes('ROLE_JUDGE')) {
                     navigate('/judge');
                     } else if (roles.includes('ROLE_ADMIN')) {
-                    navigate('/admin');
+                    navigate('/myquestion');
                      }      else {
                         setError("Invalid Login")
                     }

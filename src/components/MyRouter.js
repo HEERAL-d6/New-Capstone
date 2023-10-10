@@ -4,11 +4,18 @@ import Navbar from "./Navbar"
 import Signup from "./Signup"
 import Home from "./Home"
 import Login from "./Login"
-import Panelist from "./Panelist"
+
+import ParticpantDashboard from "./ParticipantDashboard"
+import Judgedash from "./Judgedash"
+
+
+
+
 
 
 
 export default function MyRouter() {
+    
   return (
     
     <div>
@@ -19,7 +26,10 @@ export default function MyRouter() {
               <Route element={<Home/>} path="/" />
               <Route element={<Login/>} path="/login" />
               <Route element={<Signup/>} path="/signup" /> 
-              <Route element={<Panelist/>} path="/panelist" /> 
+               
+              <Route element={<ParticpantDashboard/>} path="/participant"/> 
+              <Route element={<Judgedash/>} path="/judge"/> 
+              
            </Routes>
            </BrowserRouter>
            
