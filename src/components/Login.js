@@ -45,11 +45,11 @@ function Login() {
                     if (roles.includes('ROLE_PARTICIPANT')) {
                     navigate('/participant');
                     } else if (roles.includes('ROLE_PANELIST')) {
-                    navigate('/panelist');
+                    navigate('/pandash');
                     } else if (roles.includes('ROLE_JUDGE')) {
-                    navigate('/judge');
+                    navigate('/judgedash');
                     } else if (roles.includes('ROLE_ADMIN')) {
-                    navigate('/myquestion');
+                    navigate('/editpan');
                      }      else {
                         setError("Invalid Login")
                     }

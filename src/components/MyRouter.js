@@ -4,7 +4,6 @@ import Navbar from "./Navbar"
 import Signup from "./Signup"
 import Home from "./Home"
 import Login from "./Login"
-import Judgedash from "./Judgedash"
 export default function MyRouter() {
     
   return (
@@ -17,7 +16,7 @@ export default function MyRouter() {
               <Route element={<Home/>} path="/" />
               <Route element={<Login/>} path="/login" />
               <Route element={<Signup/>} path="/signup" /> 
-              <Route element={<Judgedash/>} path="/judge"/> 
+              {/* <Route element={<Judgedash/>} path="/judge"/>  */}
               
            </Routes>
            </BrowserRouter>
