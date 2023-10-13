@@ -7,8 +7,8 @@ import QuizOutlinedIcon from '@mui/icons-material/QuizOutlined';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 function
-    Sidebar4( {number, setNumber}) {
-    
+    Sidebar4({ number, setNumber }) {
+
 
 
     return (
@@ -17,7 +17,7 @@ function
             className='sideBar'>
 
             <div
-                class="d-flex flex-column flex-shrink-0 p-3 text-secondary bg-light" style={{
+                class="d-flex flex-column flex-shrink-0 p-3 text-secondary bg-light text-start" style={{
                     width: "300px",
                     height: "100vh"
                 }}>
@@ -88,7 +88,7 @@ function
 
                             </a>}
 
-                       
+
 
 
 
@@ -110,11 +110,11 @@ function
                                 class="nav-link text-secondary"
                                 aria-current="page"
                             >
-                                <QuizOutlinedIcon /> <lead class="pt-5 px-2"><Link   onClick={() => setNumber(3)} style={{ textDecoration: "none", color: "black" }} to='/judgedash'>Project 3</Link></lead>
+                                <QuizOutlinedIcon /> <lead class="pt-5 px-2"><Link onClick={() => setNumber(3)} style={{ textDecoration: "none", color: "black" }} to='/judgedash'>Project 3</Link></lead>
 
                             </a>}
 
-                       
+
                     </li>
 
                     <li
@@ -134,7 +134,7 @@ function
 
 
                 </ul>
-               
+
 
 
 

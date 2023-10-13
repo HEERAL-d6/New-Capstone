@@ -1,12 +1,44 @@
 import React from 'react'
 import Sidebar from './Sidebar'
+import Cookies from 'js-cookie';
 
-function Profile({number,setNumber}) {
+import { useNavigate } from 'react-router';
+
+function Profile({ number, setNumber }) {
+    const navigate = useNavigate();
+    function Logout() {
+
+        // Clear the accessToken cookie
+
+        Cookies.remove('accessToken');
+
+
+
+        // Redirect the user to the home page or wherever you want
+
+        navigate('/');
+    }
     return (
         <>
-<Sidebar number={number} setNumber={setNumber}/>
+            <Sidebar number={number} setNumber={setNumber} />
+
+            <button
+
+                className=" col-auto btn btn-dark "
+
+                onClick={Logout}
+
+                type="button"
+
+                style={{ fontSize: "1rem", height: "2rem", width: "7rem", padding: "0rem", position: 'absolute', top: '3vh', left: '80vw' }}
+
+            >
+
+                Logout
+
+            </button>
             <div style={{ width: "80%" }}>
-                <div style={{ position: 'absolute', top: "15vh", left: "38vw", width: "48.7%",  }}>
+                <div style={{ position: 'absolute', top: "15vh", left: "38vw", width: "48.7%", }}>
                     <div class='mb-4'>
                         <h5 class="d-flex align-items-center mx-auto mb-3 mb-md-0 me-md-auto text-dark
  text-decoration-none">
@@ -16,11 +48,11 @@ function Profile({number,setNumber}) {
                     </div>
 
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem"}} class="col">
+                        <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0.4rem 0.4rem 0rem 0rem" }} class="card h-100">
-                                
+
                                 <div class="card-body">
-                                    <h6 class="card-title">NAME<span style={{marginLeft:"0.6rem"}} class="badge bg-secondary">Team Leader</span></h6>
+                                    <h6 class="card-title">NAME<span style={{ marginLeft: "0.6rem" }} class="badge bg-secondary">Team Leader</span></h6>
                                     <li class="card-text">Software Developer</li>
                                     <li class="card-text">Skills</li>
                                     <li class="card-text">Mobile Number</li>
@@ -36,7 +68,7 @@ function Profile({number,setNumber}) {
 
                         <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0.4rem 0.4rem 0rem 0rem" }} class="card h-100">
-                                
+
                                 <div class="card-body">
                                     <h6 class="card-title">NAME</h6>
                                     <li class="card-text">Software Developer</li>
@@ -59,7 +91,7 @@ function Profile({number,setNumber}) {
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0rem 0rem 0.4rem 0.4rem" }} class="card h-100">
-                                
+
                                 <div class="card-body">
                                     <h6 class="card-title">NAME</h6>
                                     <li class="card-text">Software Developer</li>
@@ -77,7 +109,7 @@ function Profile({number,setNumber}) {
 
                         <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0rem 0rem 0.4rem 0.4rem" }} class="card h-100">
-                                
+
                                 <div class="card-body">
                                     <h6 class="card-title">NAME</h6>
                                     <li class="card-text">Software Developer</li>
@@ -88,7 +120,7 @@ function Profile({number,setNumber}) {
                                 </div>
                                 <div class="card-footer">
                                     <small class="text-muted">Last updated 3 mins ago</small>
-                                    
+
 
                                 </div>
                             </div>

@@ -1,15 +1,30 @@
 import React from 'react'
 import Sidebar4 from './sidebar4'
 import Cookies from "js-cookie";
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 
 const url = "https://daluvnubla.execute-api.us-west-2.amazonaws.com/dev/api/questions/forJudge";
 
-function Judgedash( {number,setNumber}) {
+function Judgedash({ number, setNumber }) {
 
-    const [Jquestion, setJquestion] = useState([]);
+  const navigate = useNavigate();
+    function Logout() {
 
-    useEffect(() => {
+        // Clear the accessToken cookie
+
+        Cookies.remove('accessToken');
+
+
+
+        // Redirect the user to the home page or wherever you want
+
+        navigate('/'); }
+
+
+  const [Jquestion, setJquestion] = useState([]);
+
+  useEffect(() => {
 
     const fetchData = async () => {
 
@@ -29,7 +44,7 @@ function Judgedash( {number,setNumber}) {
 
         });
 
- 
+
 
         if (!response.ok) {
 
@@ -37,15 +52,15 @@ function Judgedash( {number,setNumber}) {
 
         }
 
- 
+
 
         const data = await response.json();
 
- 
+
 
         console.log(data);
 
- 
+
 
         setJquestion(data); // You can set the data in your state if needed
 
@@ -57,7 +72,7 @@ function Judgedash( {number,setNumber}) {
 
     };
 
- 
+
 
     fetchData();
 
@@ -66,261 +81,164 @@ function Judgedash( {number,setNumber}) {
 
   return (
     <>
-    <Sidebar4 number={number} setNumber={setNumber} />
+      <Sidebar4 number={number} setNumber={setNumber} />
+      <button
 
-<div style={{ fontSize: "0.9rem", marginTop: "1rem" }}
+className=" col-auto btn btn-dark "
 
-        className="card-body">
+onClick={Logout}
 
+type="button"
 
+style={{ fontSize: "1rem", height: "2rem", width: "7rem", padding: "0rem", position: 'absolute', top: '3vh', left: '80vw' }}
 
-                <h6>Project Title:</h6>
+>
 
+Logout
 
+</button>
 
-                <label
-
-                style={{ marginTop: "0.5rem" }}
-
-                className="form-label fw-semibold"
-
-                >
-
-                Git Link:
-
-                </label>
-
-                <textarea
-
-                style={{ fontSize: "0.9rem", width:"50vh"}}
-
-                className="form-control text-light mx-auto my-auto d-flex"
-
-               
-
-                row="5"
-
-                >
-
-                click on file to open
-
-                </textarea>
-
+      <div style={{ height: "28rem", width: "600px", marginTop: "5rem", marginLeft: "10rem", borderRadius: "0.2" }} class="card">
+        <div style={{ fontSize: "0.9rem", marginTop: "1rem" }} className="card-body text-start bordercolor-secondary">
+          <h6>Project Title:</h6>
+          <p><label style={{ marginTop: "1rem" }} className="form-label fw-semibold float start">Git Link:</label></p>
+          <p><textarea style={{ fontSize: "0.9rem" }} className="form-control float-start" row="5"></textarea>
+          </p>
         </div>
 
-{Jquestion.map((element,index)=>{
+        {Jquestion.map((element, index) => {
+          const { question, maxMarks, id } = element;
+          return (
+            <div style={{ display: "flex" }} key={id}>
+              <div
+                style={{ height: "28", width: "600px", marginTop: "0rem", marginLeft: "0rem", borderRadius: "0.2", }} className="card bordercolor-secondary">
+                <div style={{ fontSize: "0.9rem", marginTop: "0rem" }} className="card-body">
+                  <div style={{ backgroundColor: "#d3d3d3", marginTop: "2 rem", height: "13rem", }} className="card-body">
+                    <label style={{ marginTop: "0rem" }} className="form-label fw-semibold float-start">
+                      Question id {index + 1}:
+                    </label>
 
-    const {question,maxMarks,id} = element;
+                    <textarea style={{ fontSize: "0.9rem" }} className="form-control" row="3" value={question}></textarea>
+                    <div className="input-group mb-3"><span className="input-group-text" style={{ fontSize: "0.9rem", marginTop: "0.5rem" }} id="basic-addon1" > Weightage Mark </span>
 
-    return (
+                      <input
 
-       
+                        type="number"
 
-        <div style={{ display: "flex" }} key={id}>
+                        className="form-control"
 
-    <div
+                        style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}
 
-      style={{
+                        placeholder="0"
 
-        height: "28rem",
+                        aria-label="Username"
 
-        width: "600px",
+                        aria-describedby="basic-addon1"
 
-        marginTop: "5rem",
+                      />
 
-        marginLeft: "10rem",
+                      <span
 
-        borderRadius: "0.2",
+                        style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}
 
-      }}
+                        className="input-group-text"
 
-      className="card"
+                      >
 
-    >
+                        Maximum Marks
 
-      <div
+                      </span>
 
-        style={{ fontSize: "0.9rem", marginTop: "1rem" }}
+                      <input
 
-        className="card-body"
+                        type="number"
 
-      >
+                        value={maxMarks}
 
-      <div
+                        style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}
 
-          style={{
+                        className="form-control"
 
-            backgroundColor: "#d3d3d3",
+                        placeholder="0"
 
-            marginTop: "2 rem",
+                        aria-label="Server"
 
-            height: "13rem",
+                      ></input>
 
-          }}
+                    </div>
 
-          className="card-body"
 
-        >
 
-          <label
+                    <div
 
-            style={{ marginTop: "0rem" }}
+                      className="col-auto"
 
-            className="form-label fw-semibold"
+                      style={{
 
-          >
+                        float: "right",
 
-            Question id {index + 1}:
+                        marginTop: "0.2rem",
 
-          </label>
+                        marginRight: "0.19rem",
 
-          <textarea
+                      }}
 
-            style={{ fontSize: "0.9rem" }}
+                    >
 
-            className="form-control"
+                      <button
 
-            row="3"
+                        type="submit"
 
-            value={question}
+                        style={{ fontSize: "0.7rem", height: "2rem", width: "4rem" }}
 
-          ></textarea>
+                        className="btn btn-dark btn-sm"
 
+                      >
 
+                        Next
 
-          <div className="input-group mb-3">
+                      </button>
 
-            <span
+                      <button
 
-              className="input-group-text"
+                        type="submit"
 
-              style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}
+                        style={{
 
-              id="basic-addon1"
+                          fontSize: "0.7rem",
 
-            >
+                          height: "2rem",
 
-              Weightage Marks
+                          width: "4rem",
 
-            </span>
+                          marginLeft: "0.4rem",
 
-            <input
+                        }}
 
-              type="number"
+                        className="btn btn-dark btn-sm"
 
-              className="form-control"
+                      >
 
-              style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}
+                        Submit
 
-              placeholder="0"
+                      </button>
 
-              aria-label="Username"
 
-              aria-describedby="basic-addon1"
 
-            />
+                    </div>
 
-            <span
+                  </div>
 
-              style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}
+                </div>
 
-              className="input-group-text"
+              </div>
 
-            >
+            </div>
 
-              Maximum Marks
+          )
 
-            </span>
-
-            <input
-
-              type="number"
-
-              value={maxMarks}
-
-              style={{ fontSize: "0.9rem", marginTop: "0.5rem" }}
-
-              className="form-control"
-
-              placeholder="0"
-
-              aria-label="Server"
-
-            ></input>
-
-          </div>
-
-
-
-          <div
-
-            className="col-auto"
-
-            style={{
-
-              float: "right",
-
-              marginTop: "0.2rem",
-
-              marginRight: "0.19rem",
-
-            }}
-
-          >
-
-            <button
-
-              type="submit"
-
-              style={{ fontSize: "0.7rem", height: "2rem", width: "4rem" }}
-
-              className="btn btn-dark btn-sm"
-
-            >
-
-              Next
-
-            </button>
-
-            <button
-
-              type="submit"
-
-              style={{
-
-                fontSize: "0.7rem",
-
-                height: "2rem",
-
-                width: "4rem",
-
-                marginLeft: "0.4rem",
-
-              }}
-
-              className="btn btn-dark btn-sm"
-
-            >
-
-              Submit
-
-            </button>
-
-           
-
-          </div>
-
-        </div>
-
+        })}
       </div>
-
-    </div>
-
-  </div>
-
-    )
-
-})}
     </>
   )
 }

@@ -1,12 +1,12 @@
-import React from'react'
+import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 function
-    Sidebar({number,setNumber}) {
-    
+    Sidebar({ number, setNumber }) {
+
 
 
     return (
@@ -15,7 +15,7 @@ function
             className='sideBar'>
 
             <div
-                class="d-flex flex-column flex-shrink-0 p-3 text-secondary bg-light" style={{
+                class="d-flex flex-column flex-shrink-0 p-3 text-secondary bg-light text-start" style={{
                     width: "300px",
                     height: "100vh"
                 }}>
@@ -51,7 +51,7 @@ function
                                 class="nav-link text-body"
                                 aria-current="page">
 
-                                <HomeIcon /> <strong class="pt-5 px-2"><Link  style={{ textDecoration: "none", color: "black" }} to='/participant'>Home</Link></strong>
+                                <HomeIcon /> <strong class="pt-5 px-2"><Link style={{ textDecoration: "none", color: "black" }} to='/participant'>Home</Link></strong>
 
                             </a> :
                             <a
@@ -74,7 +74,7 @@ function
                                 class="nav-link text-body"
                                 aria-current="page">
 
-                                <ArticleOutlinedIcon /> <strong class="pt-5 px-2"><Link  style={{ textDecoration: "none", color: "black" }} to='/myapp'>My Application</Link></strong>
+                                <ArticleOutlinedIcon /> <strong class="pt-5 px-2"><Link style={{ textDecoration: "none", color: "black" }} to='/myapp'>My Application</Link></strong>
 
                             </a> :
                             <a
@@ -100,7 +100,7 @@ function
                                 class="nav-link text-body"
                                 aria-current="page">
 
-                                <AccountCircleOutlinedIcon /> <strong class="pt-5 px-2"><Link  style={{ textDecoration: "none", color: "black" }} to='/myprofile'>Profile</Link></strong>
+                                <AccountCircleOutlinedIcon /> <strong class="pt-5 px-2"><Link style={{ textDecoration: "none", color: "black" }} to='/myprofile'>Profile</Link></strong>
 
                             </a> :
                             <a

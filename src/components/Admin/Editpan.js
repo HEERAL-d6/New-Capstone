@@ -1,38 +1,100 @@
 import React from 'react'
 import Sidebar2 from './Sidebar2'
 import Accordion from 'react-bootstrap/Accordion';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router';
+
 
 function Editpan({ number, setNumber }) {
+    const navigate = useNavigate();
+    function Logout() {
+
+        // Clear the accessToken cookie
+
+        Cookies.remove('accessToken');
+
+
+
+        // Redirect the user to the home page or wherever you want
+
+        navigate('/');
+    }
+
     return (
         <>
             <Sidebar2 number={number} setNumber={setNumber} />
+
+            <button
+
+                className=" col-auto btn btn-dark "
+
+                onClick={Logout}
+
+                type="button"
+
+                style={{ fontSize: "1rem", height: "2rem", width: "7rem", padding: "0rem", position: 'absolute', top: '3vh', left: '80vw' }}
+
+            >
+
+                Logout
+
+            </button>
+
             <div>
-                <Accordion defaultActiveKey="0">
+                <Accordion defaultActiveKey="0" style={{ margin: "5rem", height:"6rem", width:"45rem" }}>
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>Accordion Item #1</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                        <Accordion.Header style={{ backgroundColor: "#F8F9FA", margin: "1rem" }}><span class="fw-bold"><h5>Panelist 1</h5></span></Accordion.Header>
+                        <Accordion.Body style={{ backgroundColor: "#F8F9FA" }}>
+                            {/* <p class="fw-semibold text-start">Ideas assigned to panelist:</p> */}
+                            <p class="text-start">
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" }}><span class="fw-semibold ">Username:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold">E-mail:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teams assigned:</span></li>
+                                {/* <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Idea4:</span></li> */}
+                            </p>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="1">
-                        <Accordion.Header>Accordion Item #2</Accordion.Header>
-                        <Accordion.Body>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
-                        </Accordion.Body>
-                    </Accordion.Item>
+
                 </Accordion>
+
+                <Accordion defaultActiveKey="0" style={{ margin: "5rem" , height:"6rem", width:"45rem", marginTop:"9rem"}}>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header style={{ backgroundColor: "#F8F9FA", margin: "1rem" }}><span class="fw-bold"><h5>Participant 1</h5></span></Accordion.Header>
+                        <Accordion.Body style={{ backgroundColor: "#F8F9FA" }}>
+                            {/* <p class="fw-semibold text-start">Ideas assigned to panelist:</p> */}
+                            <p class="text-start">
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" }}><span class="fw-semibold ">Username:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold">E-mail:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Team no:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teamname:</span></li>
+                            </p>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                </Accordion>
+
+
+                <Accordion defaultActiveKey="0" style={{ margin: "5rem" , height:"6rem", width:"45rem", marginTop:"10rem"}}>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header style={{ backgroundColor: "#F8F9FA", margin: "1rem" }}><span class="fw-bold"><h5>Judge 1</h5></span></Accordion.Header>
+                        <Accordion.Body style={{ backgroundColor: "#F8F9FA" }}>
+                            {/* <p class="fw-semibold text-start">Ideas assigned to panelist:</p> */}
+                            <p class="text-start">
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" , marginLeft:"0.5rem" }}><span class="fw-semibold ">Username:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem", marginLeft:"0.5rem" }}><span class="fw-semibold">E-mail:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem", marginLeft:"0.5rem" }}><span class="fw-semibold ">Team assigned:</span></li>
+                                {/* <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teamname:</span></li> */}
+                            </p>
+                        </Accordion.Body>
+                    </Accordion.Item>
+
+                </Accordion>
+
+
+
+
+                
+
 
 
 
