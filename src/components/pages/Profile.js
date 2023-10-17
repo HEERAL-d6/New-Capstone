@@ -51,15 +51,15 @@ function Profile({ number, setNumber }) {
                         <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0.4rem 0.4rem 0rem 0rem" }} class="card h-100">
 
-                                <div class="card-body">
-                                    <h6 class="card-title">NAME<span style={{ marginLeft: "0.6rem" }} class="badge bg-secondary">Team Leader</span></h6>
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Heeral<span style={{ marginLeft: "0.6rem" }} class="badge bg-secondary">Team Leader</span></h6>
                                     <li class="card-text">Software Developer</li>
-                                    <li class="card-text">Skills</li>
-                                    <li class="card-text">Mobile Number</li>
-                                    <li class="card-text">Email@gmail.com</li>
+                                    <li class="card-text">React</li>
+                                    <li class="card-text">786543210</li>
+                                    <li class="card-text">heeral@gmail.com</li>
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                    <small class="text-muted float-start">Last updated 3 mins ago</small>
 
                                 </div>
                             </div>
@@ -69,16 +69,16 @@ function Profile({ number, setNumber }) {
                         <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0.4rem 0.4rem 0rem 0rem" }} class="card h-100">
 
-                                <div class="card-body">
-                                    <h6 class="card-title">NAME</h6>
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Anuj</h6>
                                     <li class="card-text">Software Developer</li>
-                                    <li class="card-text">Skills</li>
-                                    <li class="card-text">Mobile Number</li>
-                                    <li class="card-text">Email@gmail.com</li>
+                                    <li class="card-text">React</li>
+                                    <li class="card-text">564321789</li>
+                                    <li class="card-text">anuj@gmail.com</li>
 
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                    <small class="text-muted float-start">Last updated 3 mins ago</small>
 
                                 </div>
                             </div>
@@ -92,15 +92,15 @@ function Profile({ number, setNumber }) {
                         <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0rem 0rem 0.4rem 0.4rem" }} class="card h-100">
 
-                                <div class="card-body">
-                                    <h6 class="card-title">NAME</h6>
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Shubham</h6>
                                     <li class="card-text">Software Developer</li>
-                                    <li class="card-text">Skills</li>
-                                    <li class="card-text">Mobile Number</li>
-                                    <li class="card-text">Email@gmail.com</li>
+                                    <li class="card-text">Java</li>
+                                    <li class="card-text">8765543219</li>
+                                    <li class="card-text">shubham@gmail.com</li>
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                    <small class="text-muted float-start">Last updated 3 mins ago</small>
 
                                 </div>
                             </div>
@@ -110,16 +110,16 @@ function Profile({ number, setNumber }) {
                         <div style={{ fontSize: "0.7rem", height: "10rem", width: "18rem" }} class="col">
                             <div style={{ borderRadius: "0rem 0rem 0.4rem 0.4rem" }} class="card h-100">
 
-                                <div class="card-body">
-                                    <h6 class="card-title">NAME</h6>
+                                <div class="card-body text-start">
+                                    <h6 class="card-title">Shreya</h6>
                                     <li class="card-text">Software Developer</li>
-                                    <li class="card-text">Skills</li>
-                                    <li class="card-text">Mobile Number</li>
-                                    <li class="card-text">Email@gmail.com</li>
+                                    <li class="card-text">Java</li>
+                                    <li class="card-text">7849075342</li>
+                                    <li class="card-text">shreya@gmail.com</li>
 
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                    <small class="text-muted float-start">Last updated 3 mins ago</small>
 
 
                                 </div>

@@ -47,9 +47,9 @@ function Editpan({ number, setNumber }) {
                         <Accordion.Body style={{ backgroundColor: "#F8F9FA" }}>
                             {/* <p class="fw-semibold text-start">Ideas assigned to panelist:</p> */}
                             <p class="text-start">
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" }}><span class="fw-semibold ">Username:</span></li>
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold">E-mail:</span></li>
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teams assigned:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" }}><span class="fw-semibold ">Username:Sri Kumar</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold">E-mail:sri.kumar@gmail.com</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teams assigned:Team-2,Team-3</span></li>
                                 {/* <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Idea4:</span></li> */}
                             </p>
                         </Accordion.Body>
@@ -63,10 +63,10 @@ function Editpan({ number, setNumber }) {
                         <Accordion.Body style={{ backgroundColor: "#F8F9FA" }}>
                             {/* <p class="fw-semibold text-start">Ideas assigned to panelist:</p> */}
                             <p class="text-start">
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" }}><span class="fw-semibold ">Username:</span></li>
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold">E-mail:</span></li>
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Team no:</span></li>
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teamname:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" }}><span class="fw-semibold ">Username:Heeral</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold">E-mail:heeral@gmail.com</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Team no:Team-2</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teamname:Northstars</span></li>
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -80,9 +80,9 @@ function Editpan({ number, setNumber }) {
                         <Accordion.Body style={{ backgroundColor: "#F8F9FA" }}>
                             {/* <p class="fw-semibold text-start">Ideas assigned to panelist:</p> */}
                             <p class="text-start">
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" , marginLeft:"0.5rem" }}><span class="fw-semibold ">Username:</span></li>
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem", marginLeft:"0.5rem" }}><span class="fw-semibold">E-mail:</span></li>
-                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem", marginLeft:"0.5rem" }}><span class="fw-semibold ">Team assigned:</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "700px" , marginLeft:"0.5rem" }}><span class="fw-semibold ">Username:Aashna</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem", marginLeft:"0.5rem" }}><span class="fw-semibold">E-mail:aashna@gmail.com</span></li>
+                                <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem", marginLeft:"0.5rem" }}><span class="fw-semibold ">Team assigned:Team-2</span></li>
                                 {/* <li style={{ fontSize: "0.9rem", height: "1.5rem", width: "15rem" }}><span class="fw-semibold ">Teamname:</span></li> */}
                             </p>
                         </Accordion.Body>
